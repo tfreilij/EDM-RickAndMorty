@@ -5,7 +5,6 @@ import  Home  from "./components/Home";
 import Detail from "./components/Detail";
 function App() {
   return (
-    
     <Router>
       <div className="App">
         <Routes>
