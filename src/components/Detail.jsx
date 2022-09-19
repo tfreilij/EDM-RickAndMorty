@@ -27,7 +27,6 @@ export default function Detail() {
 
         <p> {detalle.status}</p>
         <p> {detalle.species}</p>
-        {/* <Card key={detalle.id} name={detalle.name} image={detalle.imag} /> */}
         <Card key={detalle.id} personaje={detalle} />
     </div>
   );

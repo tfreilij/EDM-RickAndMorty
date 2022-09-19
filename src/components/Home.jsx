@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import {Link} from "react-router-dom"
-//import {getCharacters} from '../service/characterService'
 import Card from "./Card";
 import axios from "axios";
 
@@ -37,9 +36,7 @@ function Home() {
           {personajes.map((p) => (
             <Link
             key={p.id}
-            to={"/detail/" + p.id}>
-              
-              {/* <Card key={p.id} name={p.name} image={p.image} /> */}
+            to={"/detail/" + p.id}>  
               <Card key={p.id} personaje={p} />
             </Link>
           ))}
