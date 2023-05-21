@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import {Link} from "react-router-dom"
-import Card from "./Card";
+import { Link } from "react-router-dom";
+import Card from "./Tarjeta";
 import axios from "axios";
 
 function Home() {
@@ -29,14 +29,7 @@ function Home() {
       <div>
         <ul>
           {personajes.map((p) => (
-            <li key={p.id}> {p.name}</li>
-          ))}
-        </ul>
-        <ul>
-          {personajes.map((p) => (
-            <Link
-            key={p.id}
-            to={"/detail/" + p.id}>  
+            <Link key={p.id} to={"/detail/" + p.id}>
               <Card key={p.id} personaje={p} />
             </Link>
           ))}

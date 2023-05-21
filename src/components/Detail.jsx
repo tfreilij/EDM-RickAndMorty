@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "./Card";
+import Tarjeta from "./Tarjeta";
 export default function Detail() {
   const { id } = useParams();
   const [detalle, setDetalle] = useState({});
@@ -18,16 +18,16 @@ export default function Detail() {
         console.log("hubo un error", error);
       });
   }, []);
-  
+
   return (
     <div>
       <Link to="/home">
         <button> Home</button>
       </Link>
 
-        <p> {detalle.status}</p>
-        <p> {detalle.species}</p>
-        <Card key={detalle.id} personaje={detalle} />
+      <p> {detalle.status}</p>
+      <p> {detalle.species}</p>
+      <Tarjeta key={detalle.id} personaje={detalle} />
     </div>
   );
 }
